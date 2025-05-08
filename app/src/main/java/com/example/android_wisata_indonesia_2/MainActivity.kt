@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         // Bottom navigation
         binding.navView.setOnItemSelectedListener { item ->
+            supportFragmentManager.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
             when (item.itemId) {
                 R.id.navigation_home -> {
                     supportFragmentManager.beginTransaction()
@@ -50,5 +51,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
     }
 }

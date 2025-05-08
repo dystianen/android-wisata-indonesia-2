@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
         android:layout_margin="16dp">
 
         <TextView
@@ -20,13 +20,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:paddingBottom="24dp"
             android:text="@string/tambah_wisata"
             android:textColor="#4A74A5"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <EditText
+            android:layout_marginTop="24dp"
             android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
