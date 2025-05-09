@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.android_wisata_indonesia_2.R
 import com.example.android_wisata_indonesia_2.databinding.FragmentDetailWisataBinding
 import com.example.android_wisata_indonesia_2.model.Wisata
 
@@ -30,8 +32,12 @@ class DetailFragment : Fragment() {
             binding.tvName.text = it.name
             binding.tvLocation.text = it.location
             binding.tvDescription.text = it.description
-//            binding.ivGambar.setImageResource(R.drawable.sample_wisata) // ganti sesuai drawable
         }
+
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
         return binding.root
     }
 

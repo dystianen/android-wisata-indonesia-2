@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:context=".ui.create.CreateFragment">
 
     <LinearLayout
@@ -12,63 +13,79 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:layout_gravity="start"
-        android:layout_margin="16dp">
+        android:gravity="center_horizontal">
 
+        <!-- Judul -->
         <TextView
             android:id="@+id/textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:text="@string/tambah_wisata"
-            android:textColor="#4A74A5"
+            android:textColor="#2B4F81"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
 
-        <EditText
-            android:layout_marginTop="24dp"
-            android:id="@+id/editTextName"
+        <!-- Nama -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="@android:color/darker_gray"
-            android:backgroundTint="#EEF2F7"
-            android:hint="@string/name"
-            android:padding="16dp"
-            android:textColorHint="#4A74A5" />
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp">
 
-        <EditText
-            android:id="@+id/editTextLocation"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Lokasi -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/darker_gray"
-            android:backgroundTint="#EEF2F7"
-            android:hint="@string/location"
-            android:padding="16dp"
-            android:textColorHint="#4A74A5" />
+            android:layout_marginBottom="16dp">
 
-        <EditText
-            android:id="@+id/editTextDeskripsi"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/location" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Deskripsi -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/darker_gray"
-            android:backgroundTint="#EEF2F7"
-            android:gravity="top"
-            android:hint="@string/description"
-            android:padding="16dp"
-            android:textColorHint="#4A74A5" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
 
-        <Button
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="top"
+                android:hint="@string/description"
+                android:inputType="textMultiLine"
+                android:maxLines="6" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Tombol Simpan -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSimpan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#5B6E99"
-            android:padding="12dp"
             android:text="@string/save"
             android:textAllCaps="false"
+            android:textStyle="bold"
             android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            app:backgroundTint="#4A6BAF"
+            app:cornerRadius="12dp" />
+
     </LinearLayout>
 </ScrollView>

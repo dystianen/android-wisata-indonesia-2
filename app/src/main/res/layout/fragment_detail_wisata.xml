@@ -1,68 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp"
+        android:gravity="center_horizontal">
 
-        <ImageView
+        <!-- Gambar dengan CardView -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/bali_3"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bali_3" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Nama Wisata -->
         <TextView
             android:id="@+id/tvName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="Wisata 1"
-            android:textAlignment="center"
-            android:textColor="#4A7EBB"
+            android:textColor="#2B4F81"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
+        <!-- Lokasi -->
         <TextView
             android:id="@+id/tvLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="#EEF2F7"
-            android:hint="Wisata 1"
-            android:inputType="text"
-            android:padding="16dp"
-            android:textColor="#000000"
-            android:textColorHint="#888888" />
+            android:background="#F3F5F7"
+            android:padding="12dp"
+            android:text="Bali, Indonesia"
+            android:textColor="#333333"
+            android:textSize="16sp" />
 
+        <!-- Deskripsi -->
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="24dp"
-            android:background="#EEF2F7"
-            android:gravity="top"
-            android:hint="Deskripsi Detail 1"
-            android:inputType="textMultiLine"
-            android:padding="16dp"
-            android:textColor="#000000"
-            android:textColorHint="#888888" />
+            android:layout_height="wrap_content"
+            android:background="#F3F5F7"
+            android:padding="12dp"
+            android:text="Deskripsi tempat wisata ini sangat menarik dan cocok untuk liburan keluarga atau solo traveling."
+            android:textColor="#444444"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
 
-        <Button
+        <!-- Tombol Back -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#5A6F98"
-            android:padding="12dp"
             android:text="Back"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            app:cornerRadius="12dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#4A6BAF" />
 
     </LinearLayout>
 </ScrollView>

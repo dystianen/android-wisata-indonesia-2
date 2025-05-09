@@ -19,8 +19,8 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         // Hardcoded data
-        binding.textName.text = "Nama: Dystian En Yusgiantoro"
-        binding.textEmail.text = "Email: distian.enyus@gmail.com"
+        binding.textName.text = "Dystian En Yusgiantoro"
+        binding.textEmail.text = "distian.enyus@gmail.com"
 
         return binding.root
     }
